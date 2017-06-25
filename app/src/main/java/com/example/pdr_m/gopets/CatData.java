@@ -7,10 +7,16 @@ package com.example.pdr_m.gopets;
 public class CatData {
     String name;
     String sex;
+    String size;
+    String age;
+    String state;
 
-    public CatData(String name, String sex) {
+    public CatData(String name, String sex, String size, String age, String state) {
         this.name = name;
         this.sex = sex;
+        this.size = size;
+        this.age = age;
+        this.state = state;
     }
 
     public String getName() {
@@ -27,5 +33,29 @@ public class CatData {
 
     public void setSex(String sex) {
         this.sex = sex;
+    }
+
+    public String getSize() {
+        return size;
+    }
+
+    public void setSize(String size) {
+        this.size = size;
+    }
+
+    public String getAge() {
+        return age;
+    }
+
+    public void setAge(String age) {
+        this.age = age;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
     }
 }

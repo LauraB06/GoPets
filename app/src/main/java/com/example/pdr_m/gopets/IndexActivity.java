@@ -45,19 +45,19 @@ public class IndexActivity extends AppCompatActivity {
 
         animals = new ArrayList<>();
 
-        animals.add(new CatData("Apple Pie", "Android 1.0"));
-        animals.add(new CatData("Banana Bread", "Android 1.1"));
-        animals.add(new CatData("Cupcake", "Android 1.5"));
-        animals.add(new CatData("Donut", "Android 1.6"));
-        animals.add(new CatData("Eclair", "Android 2.0"));
-        animals.add(new CatData("Froyo", "Android 2.2"));
-        animals.add(new CatData("Gingerbread", "Android 2.3"));
-        animals.add(new CatData("Honeycomb", "Android 3.0"));
-        animals.add(new CatData("Ice Cream Sandwich", "Android 4.0"));
-        animals.add(new CatData("Jelly Bean", "Android 4.2"));
-        animals.add(new CatData("Kitkat", "Android 4.4"));
-        animals.add(new CatData("Lollipop", "Android 5.0"));
-        animals.add(new CatData("Marshmallow", "Android 6.0"));
+        animals.add(new CatData("Apple Pie", "Male", "Medium", "3 months", "RN"));
+        animals.add(new CatData("Banana Bread", "Female", "Large", "2 years old", "RN"));
+        animals.add(new CatData("Cupcake", "Female", "Small", "2 months", "RN"));
+        animals.add(new CatData("Donut", "Male", "Small", "2 months", "RN"));
+        animals.add(new CatData("Eclair", "Male", "Large", "1 year old", "RN"));
+        animals.add(new CatData("Froyo", "Male", "Large", "3 years old", "RN"));
+        animals.add(new CatData("Gingerbread", "Male", "Small", "4 months", "RN"));
+        animals.add(new CatData("Honeycomb", "Female", "Medium", "6 months", "RN"));
+        animals.add(new CatData("Ice Cream Sandwich", "Female", "Medium", "6 months", "RN"));
+        animals.add(new CatData("Jelly Bean", "Female", "Large", "1 year old", "RN"));
+        animals.add(new CatData("Kitkat", "Male", "Small", "2 months", "RN"));
+        animals.add(new CatData("Lollipop", "Female", "Large", "2 years old", "RN"));
+        animals.add(new CatData("Marshmallow", "Male", "Small", "4 months", "RN"));
 
         adapter = new AdoptionListAdapter(animals, getApplicationContext());
 

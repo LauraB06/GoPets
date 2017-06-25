@@ -22,6 +22,9 @@ public class AdoptionListAdapter extends ArrayAdapter<CatData> {
         ImageView photo;
         TextView name;
         TextView sex;
+        TextView size;
+        TextView age;
+        TextView state;
     }
 
     public AdoptionListAdapter(ArrayList<CatData> data, Context context) {
@@ -43,6 +46,9 @@ public class AdoptionListAdapter extends ArrayAdapter<CatData> {
             convertView = inflater.inflate(R.layout.activity_listview, parent, false);
             viewHolder.name = (TextView) convertView.findViewById(R.id.name);
             viewHolder.sex = (TextView) convertView.findViewById(R.id.sex);
+            viewHolder.size = (TextView) convertView.findViewById(R.id.size);
+            viewHolder.age = (TextView) convertView.findViewById(R.id.age);
+            viewHolder.state = (TextView) convertView.findViewById(R.id.state);
             viewHolder.photo = (ImageView) convertView.findViewById(R.id.photo);
 
             result = convertView;
@@ -55,8 +61,12 @@ public class AdoptionListAdapter extends ArrayAdapter<CatData> {
         }
         viewHolder.name.setText(cat.getName());
         viewHolder.sex.setText(cat.getSex());
-        viewHolder.photo.setImageResource(R.drawable.chuvisco_img);
+        viewHolder.size.setText(cat.getSize());
+        viewHolder.age.setText(cat.getAge());
+        viewHolder.state.setText(cat.getState());
+        viewHolder.photo.setImageResource(R.drawable.catu);
 
         return convertView;
     }
+
 }
