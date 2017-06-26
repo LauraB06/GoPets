@@ -1,47 +1,29 @@
 package com.example.pdr_m.gopets;
 
-//import android.os.Bundle;
-//import android.app.Activity;
-//import android.view.Menu;
-//import android.widget.ArrayAdapter;
-//import android.widget.ListView;
-//
-//public class IndexActivity extends Activity {
-//    // Array of strings...
-//    String[] mobileArray = {"Bolota", "Bolacha", "Pretinho", "Brahma", "Bacon", "Catito", "Chuvisco", "Dunga",
-//                             "Bolota", "Bolacha", "Pretinho", "Brahma", "Bacon", "Catito", "Chuvisco", "Dunga"};
-//
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.index_activity);
-//
-//        ArrayAdapter adapter = new ArrayAdapter<String>(this,
-//                R.layout.activity_listview, mobileArray);
-//
-//        ListView listView = (ListView) findViewById(R.id.adoption_list);
-//        listView.setAdapter(adapter);
-//    }
-//}
-
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ListView;
 
 import java.util.ArrayList;
 
-public class IndexActivity extends AppCompatActivity {
+/**
+ * Created by laura on 26-Jun-17.
+ */
+
+public class AdoptionListFragment extends Fragment {
 
     ArrayList<CatData> animals;
     ListView listView;
-    private static AdoptionListAdapter adapter;
+    AdoptionListAdapter adapter;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.index_activity);
-
-        listView = (ListView) findViewById(R.id.adoption_list);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View rootView = inflater.inflate(R.layout.fragment_adoptionlist, container, false);
+        listView = (ListView) rootView.findViewById(R.id.adoption_list);
 
         animals = new ArrayList<>();
 
@@ -59,8 +41,11 @@ public class IndexActivity extends AppCompatActivity {
         animals.add(new CatData("Lollipop", "Female", "Large", "2 years old", "RN"));
         animals.add(new CatData("Marshmallow", "Male", "Small", "4 months", "RN"));
 
-        adapter = new AdoptionListAdapter(animals, getApplicationContext());
+        adapter = new AdoptionListAdapter(animals, getContext());
 
         listView.setAdapter(adapter);
+
+        return rootView;
     }
 }
+
